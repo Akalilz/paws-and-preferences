@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Discover your perfect feline companions with Paws & Preferences - an interactive cat browsing experience.">
+  <meta name="keywords" content="cats, pets, adoption, swipe, tinder for cats">
+  <meta name="author" content="Paws & Preferences">
+  <meta name="theme-color" content="#d97706">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Paws & Preferences">
+  <meta property="og:description" content="Swipe through adorable cats and discover your favorites">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  
+  <title>Paws & Preferences | Find Your Perfect Cat Match</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="app-title">
+          <span class="icon">🐾</span>
+          Paws & Preferences
+        </h1>
+        <p class="app-subtitle">Discover your purrfect match</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Game Section -->
+      <section class="game-section" aria-label="Cat browsing interface">
+        <div class="instructions">
+          <p class="instruction-text">
+            <span class="swipe-icon swipe-left">←</span>
+            Swipe left to skip
+            <span class="divider">•</span>
+            Swipe right to like
+            <span class="swipe-icon swipe-right">→</span>
+          </p>
+        </div>
+
+        <div class="card-container">
+          <div id="card-stack" class="card-stack" role="region" aria-label="Cat cards to swipe" aria-live="polite"></div>
+          
+          <div class="progress-indicator">
+            <span id="current-card">1</span> / <span id="total-cards">10</span>
+          </div>
+        </div>
+        
+        <div class="controls" role="group" aria-label="Card controls">
+          <button class="control-btn skip-btn" id="skip-button" aria-label="Skip this cat" type="button">
+            <span class="btn-icon">✕</span>
+            <span class="btn-text">Pass</span>
+          </button>
+          <button class="control-btn like-btn" id="like-button" aria-label="Like this cat" type="button">
+            <span class="btn-icon">♥</span>
+            <span class="btn-text">Like</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Summary Section -->
+      <section id="summary" class="summary-section hidden" role="region" aria-label="Summary of liked cats">
+        <div class="summary-content">
+          <div class="summary-header">
+            <h2 class="summary-title">
+              <span class="emoji-icon">🎉</span>
+              You've made your choices!
+            </h2>
+            <p class="summary-stats">
+              You liked <strong id="like-count" class="highlight">0</strong> 
+              <span id="cat-word">cat</span> out of <strong id="total-viewed">10</strong>
+            </p>
+          </div>
+
+          <div class="liked-section">
+            <h3 class="section-title">Your Favorites</h3>
+            <div id="liked-cats" class="liked-cats-grid" role="gallery" aria-label="Gallery of liked cats"></div>
+            <p id="no-likes-message" class="no-likes-message hidden">
+              No cats selected. Maybe you're more of a dog person? 🐶
+            </p>
+          </div>
+
+          <div class="summary-actions">
+            <button id="restart" class="restart-btn" type="button" aria-label="Start over with new cats">
+              <span class="btn-icon">🔄</span>
+              <span class="btn-text">Start Over</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          Made with <span class="heart">♥</span> for cat lovers everywhere
+        </p>
+        <p class="footer-credits">
+          <small>Powered by <a href="https://cataas.com" target="_blank" rel="noopener noreferrer">CATAAS</a></small>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
